@@ -5,6 +5,7 @@ class yum::puppetlabs::el6 {
       baseurl => 'http://yum.puppetlabs.com/el/6/products/$basearch',
       gpgcheck => 1,
       gpgkey => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs',
+      priority => 1,
       enabled => 1;
 
     'puppetlabs-deps' :
@@ -12,6 +13,7 @@ class yum::puppetlabs::el6 {
       baseurl => 'http://yum.puppetlabs.com/el/6/dependencies/$basearch',
       gpgcheck => 1,
       gpgkey => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs',
+      priority => 1,
       enabled => 1;
   }
 }
